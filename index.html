@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Sc. Romel Percy Melgarejo Bolivar | Perfil Profesional</title>
+    <title>Rommel Absalón Pacori Vera | Perfil Académico</title>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -12,11 +12,7 @@
             --light: #f3f4f6;
             --white: #ffffff;
         }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--dark);
@@ -26,42 +22,64 @@
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
-            padding: 3rem 1rem;
+            padding: 3.5rem 1rem 2.5rem;
             text-align: center;
         }
-        header h1 {
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: 3px solid rgba(255,255,255,0.6);
+            margin: 0 auto 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: white;
         }
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+        header h1 { font-size: 2rem; margin-bottom: 0.4rem; }
+        header .subtitulo { font-size: 1rem; opacity: 0.88; margin-bottom: 0.2rem; }
+        header .institucion { font-size: 0.88rem; opacity: 0.75; font-style: italic; }
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1.2rem;
         }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .chip {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 0.25rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
         }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
         section {
             background-color: var(--white);
             padding: 1.8rem;
             margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            border-left: 4px solid var(--secondary);
         }
         h2 {
             color: var(--primary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.3rem;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        ul {
-            list-style-type: none;
-        }
+        ul { list-style-type: none; }
         li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.2rem;
+            margin-bottom: 0.9rem;
+            padding-left: 1.4rem;
             position: relative;
         }
         li::before {
@@ -72,107 +90,93 @@
             font-weight: bold;
         }
         .badge {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 0.2rem 0.6rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.2rem 0.7rem;
             border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: bold;
+            font-size: 0.78rem;
+            font-weight: 600;
             display: inline-block;
             margin-top: 0.3rem;
         }
-        .project-title {
-            font-weight: bold;
-            color: var(--dark);
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.6rem;
+        }
+        .skill-pill {
+            background: var(--light);
+            border: 1px solid #e5e7eb;
+            color: var(--primary);
+            padding: 0.45rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            text-align: center;
+            font-weight: 500;
         }
         footer {
             text-align: center;
             padding: 2rem;
-            font-size: 0.9rem;
-            color: #6b7280;
+            font-size: 0.85rem;
+            color: #9ca3af;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>M.Sc. Romel Percy Melgarejo Bolivar</h1>
-        <p>Docente Universitario | Especialista en TI e Ingeniería Estadística e Informática</p>
-    </header>
-
-    <div class="container">
-        
-        <section id="sobre-mi">
-            <h2>Resumen Profesional</h2>
-            <p>Magíster Scientiae en Informática con mención en Gerencia de Tecnologías de Información y Comunicaciones por la Universidad Nacional del Altiplano. Profesional especializado en Ciencia de Datos, redes telemáticas y desarrollo de software con registro de patentes de propiedad intelectual ante INDECOPI.</p>
-        </section>
-
-        <section id="educacion">
-            <h2>Formación Académica</h2>
-            <ul>
-                <li>
-                    <strong>Magíster Scientiae en Informática</strong><br>
-                    Mención en Gerencia de Tecnologías de Información y Comunicaciones — Universidad Nacional del Altiplano
-                </li>
-                <li>
-                    <strong>Ingeniero Estadístico e Informático</strong><br>
-                    Título Profesional — Universidad Nacional del Altiplano
-                </li>
-            </ul>
-        </section>
-
-        <section id="experiencia">
-            <h2>Experiencia Destacada</h2>
-            <ul>
-                <li>
-                    <strong>Docente Universitario</strong> — Universidad Nacional del Altiplano Puno<br>
-                    <span class="badge">2020 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Presidente del Capítulo de Ingenieros Estadísticos e Informáticos</strong> — Colegio de Ingenieros del Perú (CD Puno)<br>
-                    <span class="badge">2022 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Auxiliar Ordinario</strong> — Universidad Nacional de Moquegua
-                </li>
-            </ul>
-        </section>
-
-        <section id="propiedad-intelectual">
-            <h2>Software y Propiedad Intelectual (INDECOPI)</h2>
-            <ul>
-                <li>
-                    <span class="project-title">Criptologin</span> — Módulo integrable de validación de usuarios mediante token USB DNI electrónico (Reg. 31152022).
-                </li>
-                <li>
-                    <span class="project-title">Enviromaker</span> — Software de procesamiento y generación de ambientes tridimensionales (Reg. 31132022).
-                </li>
-                <li>
-                    <span class="project-title">GLPAK GUI</span> — Interfaz gráfica para renderizado 3D en ventanas Win GDI+ (Reg. 31122022).
-                </li>
-                <li>
-                    <span class="project-title">Plataforma de Certificación Electrónica</span> — Derecho de autor por software (Reg. 1382017).
-                </li>
-            </ul>
-        </section>
-
-        <section id="investigacion">
-            <h2>Producción Científica</h2>
-            <ul>
-                <li>
-                    <strong>Capítulo de Libro (2023):</strong> "Predicción de diabetes en mujeres mediante un modelo probabilístico basado en Redes Bayesianas" en <em>O Cuidado em Saúde Baseado em Evidências</em>.
-                </li>
-                <li>
-                    <strong>Artículo de Revista (2022):</strong> "Arquitectura pervasiva con tecnologías WebRTC híbridas para el desarrollo de un framework Modelo Vista Controlador de tiempo real".
-                </li>
-            </ul>
-        </section>
-
+<header>
+    <div class="avatar">RP</div>
+    <h1>Rommel Absalón Pacori Vera</h1>
+    <p class="subtitulo">Estudiante de Ingeniería Estadística e Informática</p>
+    <p class="institucion">Universidad Nacional del Altiplano — Puno, Perú</p>
+    <div class="chips">
+        <span class="chip">📧 rpacori@unap.est.pe</span>
+        <span class="chip">📍 Juliaca, Puno, Perú</span>
     </div>
+</header>
 
-    <footer>
-        <p>&copy; 2026 Romel Percy Melgarejo Bolivar. Desarrollado y alojado con GitHub Pages.</p>
-    </footer>
+<div class="container">
+
+    <section id="resumen">
+        <h2><span>👤</span> Resumen Profesional</h2>
+        <p>Estudiante de Ingeniería Estadística e Informática en la Universidad Nacional del Altiplano de Puno, con sólida formación en análisis de datos, desarrollo de software y tecnologías web. Interesado en la ciencia de datos, el aprendizaje automático y el desarrollo de soluciones digitales orientadas al contexto educativo y social de la región.</p>
+    </section>
+
+    <section id="educacion">
+        <h2><span>🎓</span> Formación Académica</h2>
+        <ul>
+            <li>
+                <strong>Ingeniería Estadística e Informática</strong><br>
+                Universidad Nacional del Altiplano — Puno, Perú<br>
+                <span class="badge">2021 – Actualidad</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="habilidades">
+        <h2><span>🛠️</span> Habilidades Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-pill">Python</div>
+            <div class="skill-pill">Firebase</div>
+            <div class="skill-pill">HTML / CSS</div>
+            <div class="skill-pill">R</div>
+            <div class="skill-pill">ReportLab</div>
+        </div>
+    </section>
+
+    <section id="idiomas">
+        <h2><span>🌐</span> Idiomas</h2>
+        <ul>
+            <li><strong>Español</strong> — Nativo</li>
+            <li><strong>Inglés</strong> — Básico</li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Rommel Absalón Pacori Vera — Perfil Académico Personal</p>
+</footer>
 
 </body>
 </html>
