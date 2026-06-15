@@ -1,182 +1,395 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rommel Absalón Pacori Vera | Perfil Académico</title>
-    <style>
-        :root {
-            --primary: #1e3a8a;
-            --secondary: #0284c7;
-            --dark: #1f2937;
-            --light: #f3f4f6;
-            --white: #ffffff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 3.5rem 1rem 2.5rem;
-            text-align: center;
-        }
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            border: 3px solid rgba(255,255,255,0.6);
-            margin: 0 auto 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: white;
-        }
-        header h1 { font-size: 2rem; margin-bottom: 0.4rem; }
-        header .subtitulo { font-size: 1rem; opacity: 0.88; margin-bottom: 0.2rem; }
-        header .institucion { font-size: 0.88rem; opacity: 0.75; font-style: italic; }
-        .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: 1.2rem;
-        }
-        .chip {
-            background: rgba(255,255,255,0.18);
-            border: 1px solid rgba(255,255,255,0.4);
-            color: white;
-            padding: 0.25rem 0.9rem;
-            border-radius: 999px;
-            font-size: 0.82rem;
-        }
-        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-        section {
-            background-color: var(--white);
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-            border-left: 4px solid var(--secondary);
-        }
-        h2 {
-            color: var(--primary);
-            border-bottom: 2px solid var(--light);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.1rem;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        ul { list-style-type: none; }
-        li {
-            margin-bottom: 0.9rem;
-            padding-left: 1.4rem;
-            position: relative;
-        }
-        li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-        }
-        .badge {
-            background: var(--primary);
-            color: white;
-            padding: 0.2rem 0.7rem;
-            border-radius: 4px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 0.3rem;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 0.6rem;
-        }
-        .skill-pill {
-            background: var(--light);
-            border: 1px solid #e5e7eb;
-            color: var(--primary);
-            padding: 0.45rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            text-align: center;
-            font-weight: 500;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.85rem;
-            color: #9ca3af;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rommel Absalón Pacori Vera | CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f8fafc; --panel:#f1f5f9; --dark:#1e293b; --dark2:#1e293b;
+  --cyan:#38bdf8; --cyan2:#0ea5e9; --text:#1e293b; --muted:#334155;
+  --card:#ffffff; --border:rgba(30,41,59,0.12); --nav-bg:#1e293b;
+  --hero-bg:#1e293b; --sidebar-bg:#f1f5f9; --main-bg:#f8fafc;
+  --footer-bg:#1e293b; --tag-bg:rgba(163,230,53,0.12); --tag-color:#4d7c0f;
+  --tag-border:rgba(163,230,53,0.35);
+  --slate:#334155; --slate-dark:#1e293b; --sky:#38bdf8; --lime:#a3e635;
+}
+[data-theme="dark"] {
+  --bg:#0d1117; --panel:#161b22; --dark:#090d13; --dark2:#090d13;
+  --cyan:#38bdf8; --cyan2:#0ea5e9; --text:#e2e8f0; --muted:#94a3b8;
+  --card:#161b22; --border:rgba(163,230,53,0.12);
+  --nav-bg:#090d13; --hero-bg:#090d13; --sidebar-bg:#161b22; --main-bg:#0d1117;
+  --footer-bg:#090d13; --tag-bg:rgba(163,230,53,0.08); --tag-color:#a3e635;
+  --tag-border:rgba(163,230,53,0.2);
+  --slate:#334155; --slate-dark:#1e293b; --sky:#38bdf8; --lime:#a3e635;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);transition:background 0.3s,color 0.3s;min-height:100vh;}
+
+/* ── NAV ── */
+.nav-wrap{background:linear-gradient(90deg,#1e293b,#334155);position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(163,230,53,0.3);}
+nav{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1.5rem;}
+.nav-logo{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#38bdf8;letter-spacing:1px;}
+.nav-links{display:flex;align-items:center;gap:0.4rem;}
+.nav-links a{color:#94afc8;text-decoration:none;font-size:0.73rem;font-family:'JetBrains Mono',monospace;padding:0.28rem 0.7rem;border-radius:4px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);transition:all 0.2s;}
+.nav-links a:hover{color:var(--cyan);border-color:var(--cyan);}
+.nav-links a.cta{background:#a3e635;color:#1e293b;font-weight:600;border-color:#a3e635;}
+.nav-links a.cta:hover{background:#84cc16;color:#1e293b;}
+#toggle-theme{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#94afc8;font-size:1rem;width:32px;height:32px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;padding:0;}
+#toggle-theme:hover{border-color:var(--cyan);color:var(--cyan);}
+.hamburger{display:none;background:none;border:none;color:#94afc8;font-size:1.3rem;cursor:pointer;}
+
+/* ── HERO ── */
+.hero-wrap{background:linear-gradient(135deg,#1e293b 0%,#334155 60%,#475569 100%);position:relative;overflow:hidden;border-bottom:3px solid #a3e635;}
+canvas#particles{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.5;}
+.hero-inner{max-width:1000px;margin:0 auto;padding:2.5rem 1.5rem 0;display:flex;align-items:center;gap:2.5rem;position:relative;z-index:1;}
+.avatar-ring{flex-shrink:0;width:140px;height:140px;border-radius:50%;border:4px solid #a3e635;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:2.8rem;font-weight:700;color:#38bdf8;box-shadow:0 0 0 6px rgba(163,230,53,0.2),0 0 0 8px rgba(56,189,248,0.1),0 8px 40px rgba(0,0,0,0.4);}
+.hero-text{flex:1;padding-bottom:2rem;}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#38bdf8;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.5rem;opacity:1;}
+.hero-text h1{font-size:2.4rem;font-weight:700;color:#f0f4f8;line-height:1.1;margin-bottom:0.4rem;}
+[data-theme="light"] .hero-text h1{color:#f0f4f8;}
+.hero-text h1 em{color:#a3e635;font-style:normal;}
+.hero-role{font-size:0.88rem;color:#7a9ab8;margin-bottom:1rem;opacity:1;}
+.hero-tagline{font-size:0.82rem;color:#5a7a94;font-style:italic;margin-bottom:1.2rem;opacity:1;}
+.hero-icons{display:flex;gap:0.6rem;opacity:1;}
+.h-ico{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:#94afc8;font-size:1rem;text-decoration:none;transition:all 0.2s;}
+.h-ico:hover{background:var(--cyan);color:#0a1218;border-color:var(--cyan);}
+
+/* ── ACERCA DE MÍ ── */
+.acerca-wrap{background:rgba(51,65,85,0.4);border-bottom:1px solid rgba(163,230,53,0.2);}
+[data-theme="light"] .acerca-wrap{background:rgba(0,0,0,0.15);}
+.acerca-inner{max-width:1000px;margin:0 auto;padding:1.4rem 1.5rem;}
+.acerca-inner h2{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#38bdf8;text-align:center;letter-spacing:3px;text-transform:uppercase;margin-bottom:0.7rem;}
+.acerca-inner p{font-size:0.85rem;color:rgba(240,249,255,0.85);line-height:1.8;text-align:center;max-width:700px;margin:0 auto;}
+
+/* ── STATS ── */
+.stats-wrap{background:linear-gradient(90deg,#334155,#1e293b);border-bottom:1px solid rgba(163,230,53,0.2);}
+.stats-inner{max-width:1000px;margin:0 auto;padding:1.2rem 1.5rem;display:grid;grid-template-columns:repeat(2,1fr);max-width:400px;gap:1rem;}
+.stat-item{text-align:center;}
+.stat-num{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:700;color:#38bdf8;line-height:1;}
+.stat-label{font-size:0.72rem;color:#5a7a94;margin-top:0.3rem;text-transform:uppercase;letter-spacing:1px;}
+
+/* ── LAYOUT ── */
+.layout{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:270px 1fr;min-height:60vh;}
+
+/* ── SIDEBAR ── */
+.sidebar{background:var(--sidebar-bg);padding:2rem 1.4rem;border-right:3px solid #a3e635;transition:background 0.3s;}
+
+/* ── MAIN ── */
+.main{background:var(--main-bg);padding:2rem 1.8rem;transition:background 0.3s;}
+
+/* ── SECTION LABEL ── */
+.sec-label{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.2rem;}
+.sec-dot{width:8px;height:8px;border-radius:50%;background:#a3e635;flex-shrink:0;}
+.sec-label h2{font-family:'JetBrains Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#475569;}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.sb-block{margin-bottom:2rem;}
+
+/* ── SKILL BARS ── */
+.skill-row{margin-bottom:0.8rem;}
+.skill-top{display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:0.3rem;}
+.skill-pct{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--cyan);}
+.bar-bg{height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#334155,#38bdf8);transition:width 1.4s cubic-bezier(0.4,0,0.2,1);}
+
+/* ── INTEREST CHIPS ── */
+.chip{display:inline-flex;align-items:center;gap:0.3rem;background:var(--card);border:1px solid rgba(56,189,248,0.2);color:var(--text);font-size:0.75rem;padding:0.28rem 0.65rem;border-radius:6px;margin:0.2rem 0.15rem 0 0;transition:border-color 0.2s;}
+.chip:hover{border-color:#a3e635;}
+
+/* ── LANG ROW ── */
+.lang-row{display:flex;justify-content:space-between;align-items:center;padding:0.4rem 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+.lang-row:last-child{border-bottom:none;}
+.lang-badge{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:rgba(163,230,53,0.1);color:#4d7c0f;border:1px solid rgba(163,230,53,0.3);padding:0.15rem 0.5rem;border-radius:4px;}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:1.3rem;}
+.timeline::before{content:'';position:absolute;left:4px;top:6px;bottom:0;width:1px;background:linear-gradient(to bottom,#a3e635,#38bdf8,transparent);}
+.tl-item{position:relative;margin-bottom:1.8rem;opacity:1;transform:none;}
+.tl-item.visible{opacity:1;transform:none;}
+.tl-dot{position:absolute;left:-1.3rem;top:5px;width:10px;height:10px;border-radius:50%;background:#a3e635;border:2px solid var(--bg);box-shadow:0 0 0 2px #a3e635;}
+.tl-year{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#0ea5e9;margin-bottom:0.15rem;}
+.tl-title{font-weight:600;font-size:0.92rem;color:var(--text);margin-bottom:0.1rem;transition:color 0.3s;}
+.tl-sub{font-size:0.78rem;color:var(--muted);margin-bottom:0.35rem;}
+.tl-desc{font-size:0.78rem;color:var(--muted);line-height:1.65;}
+.tl-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.5rem;}
+.tl-tag{font-family:'JetBrains Mono',monospace;font-size:0.62rem;background:rgba(163,230,53,0.08);color:#4d7c0f;border:1px solid rgba(163,230,53,0.28);padding:0.15rem 0.5rem;border-radius:4px;}
+
+/* ── PROJECT CARD ── */
+.proj-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s;opacity:1;transform:none;}
+.proj-card.visible{opacity:1;transform:none;}
+.proj-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(163,230,53,0.12);border-color:rgba(163,230,53,0.4);}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#a3e635,#38bdf8);}
+.proj-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem;}
+.proj-name{font-weight:700;font-size:1rem;color:var(--text);}
+.proj-live{font-family:'JetBrains Mono',monospace;font-size:0.62rem;background:rgba(163,230,53,0.1);color:#4d7c0f;border:1px solid rgba(163,230,53,0.3);padding:0.18rem 0.6rem;border-radius:20px;}
+.proj-desc{font-size:0.8rem;color:var(--muted);line-height:1.65;margin-bottom:0.8rem;}
+.proj-url{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#0ea5e9;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;margin-bottom:0.8rem;}
+.proj-url:hover{text-decoration:underline;}
+
+/* ── FOOTER ── */
+footer{background:linear-gradient(90deg,#1e293b,#334155);text-align:center;padding:1.2rem;font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#94a3b8;border-top:1px solid rgba(163,230,53,0.2);}
+footer span{color:var(--cyan);}
+
+/* ── PRINT ── */
+@media print{
+  .nav-wrap,.stats-wrap,canvas{display:none!important;}
+  body{background:#fff!important;color:#000!important;}
+  .hero-wrap{background:#1e2d3d!important;}
+  .layout{display:block!important;}
+  .sidebar{border:none!important;}
+}
+
+/* ── MOBILE ── */
+@media(max-width:700px){
+  .layout{grid-template-columns:1fr;}
+  .sidebar{border-right:none;border-bottom:1px solid var(--border);}
+  .hero-inner{flex-direction:column;text-align:center;padding-bottom:1.5rem;}
+  .hero-icons{justify-content:center;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .nav-links a:not(.cta){display:none;}
+  .hamburger{display:block;}
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.fade-in{opacity:1;transform:none;}
+.fade-in.visible{opacity:1;transform:none;}
+</style>
 </head>
 <body>
 
-<header>
-    <div class="avatar">RP</div>
-    <h1>Rommel Absalón Pacori Vera</h1>
-    <p class="subtitulo">Estudiante de Ingeniería Estadística e Informática</p>
-    <p class="institucion">Universidad Nacional del Altiplano — Puno, Perú</p>
-    <div class="chips">
-        <span class="chip">📧 rpacori@unap.est.pe</span>
-        <span class="chip">📍 Juliaca, Puno, Perú</span>
-    </div>
-</header>
-
-<div class="container">
-
-    <section id="resumen">
-        <h2><span>👤</span> Resumen Profesional</h2>
-        <p>Estudiante de Ingeniería Estadística e Informática en la Universidad Nacional del Altiplano de Puno, con sólida formación en análisis de datos, desarrollo de software y tecnologías web. Interesado en la ciencia de datos, el aprendizaje automático y el desarrollo de soluciones digitales orientadas al contexto educativo y social de la región.</p>
-    </section>
-
-    <section id="educacion">
-        <h2><span>🎓</span> Formación Académica</h2>
-        <ul>
-            <li>
-                <strong>Ingeniería Estadística e Informática</strong><br>
-                Universidad Nacional del Altiplano — Puno, Perú<br>
-                <span class="badge">2021 – Actualidad</span>
-            </li>
-        </ul>
-    </section>
-
-    <section id="habilidades">
-        <h2><span>🛠️</span> Habilidades Técnicas</h2>
-        <div class="skills-grid">
-            <div class="skill-pill">Python</div>
-            <div class="skill-pill">Firebase</div>
-            <div class="skill-pill">HTML / CSS</div>
-            <div class="skill-pill">R</div>
-            <div class="skill-pill">ReportLab</div>
-        </div>
-    </section>
-
-    <section id="idiomas">
-        <h2><span>🌐</span> Idiomas</h2>
-        <ul>
-            <li><strong>Español</strong> — Nativo</li>
-            <li><strong>Inglés</strong> — Básico</li>
-        </ul>
-    </section>
-
+<!-- NAV -->
+<div class="nav-wrap">
+<nav>
+  <div class="nav-logo">rpacori.dev</div>
+  <div class="nav-links">
+    <a href="#educacion">Educación</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#proyecto">Proyecto</a>
+    <a href="#" onclick="window.print();return false;" class="cta">⬇ Descargar</a>
+    <button id="toggle-theme" title="Cambiar tema">🌙</button>
+  </div>
+  <button class="hamburger" id="ham">☰</button>
+</nav>
 </div>
 
-<footer>
-    <p>&copy; 2026 Rommel Absalón Pacori Vera — Perfil Académico Personal</p>
+<!-- HERO -->
+<div class="hero-wrap">
+  <canvas id="particles"></canvas>
+  <div class="hero-inner">
+    <div class="avatar-ring">RP</div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">▶ Perfil Académico · UNA Puno · 2026</div>
+      <h1>Rommel Absalón<br><em>Pacori Vera</em></h1>
+      <div class="hero-role">Estudiante de Ingeniería Estadística e Informática</div>
+      <div class="hero-tagline">"Convirtiendo datos en decisiones y código en soluciones."</div>
+      <div class="hero-icons">
+        <a href="mailto:rpacori@unap.est.pe" class="h-ico" title="Correo">✉️</a>
+        <a href="https://github.com/Rommel-23" target="_blank" class="h-ico" title="GitHub">🔗</a>
+        <span class="h-ico" title="Juliaca, Puno — Perú">📍</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACERCA DE MÍ -->
+  <div class="acerca-wrap">
+    <div class="acerca-inner">
+      <h2>Acerca de mí</h2>
+      <p>Futuro ingeniero especializado en datos e informática, con interés en inteligencia artificial, desarrollo de software y emprendimiento tecnológico. Apasionado por construir herramientas digitales que resuelvan problemas reales en su región, combinando estadística, código y visión de negocio.</p>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-wrap">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num" data-target="1">0</div>
+      <div class="stat-label">Proyecto en producción</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="6">0</div>
+      <div class="stat-label">Tecnologías dominadas</div>
+    </div>
+  </div>
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sb-block fade-in">
+      <div class="sec-label"><div class="sec-dot"></div><h2>Habilidades técnicas</h2></div>
+      <div class="skill-row"><div class="skill-top"><span>Python</span><span class="skill-pct">85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span>HTML / CSS</span><span class="skill-pct">82%</span></div><div class="bar-bg"><div class="bar-fill" data-w="82"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span>Firebase</span><span class="skill-pct">78%</span></div><div class="bar-bg"><div class="bar-fill" data-w="78"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span>R</span><span class="skill-pct">75%</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span>ReportLab</span><span class="skill-pct">70%</span></div><div class="bar-bg"><div class="bar-fill" data-w="70"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span>Machine Learning</span><span class="skill-pct">65%</span></div><div class="bar-bg"><div class="bar-fill" data-w="65"></div></div></div>
+    </div>
+
+    <div class="sb-block fade-in">
+      <div class="sec-label"><div class="sec-dot"></div><h2>Idiomas</h2></div>
+      <div class="lang-row"><span>Español</span><span class="lang-badge">Nativo</span></div>
+      <div class="lang-row"><span>Inglés</span><span class="lang-badge">Básico</span></div>
+    </div>
+
+    <div class="sb-block fade-in">
+      <div class="sec-label"><div class="sec-dot"></div><h2>Intereses</h2></div>
+      <span class="chip">⚽ Fútbol</span>
+      <span class="chip">🤖 Inteligencia Artificial</span>
+      <span class="chip">📊 Ciencia de datos</span>
+      <span class="chip">🚀 Emprendimiento</span>
+      <span class="chip">💻 Open Source</span>
+    </div>
+
+    <div class="sb-block fade-in">
+      <div class="sec-label"><div class="sec-dot"></div><h2>Contacto</h2></div>
+      <div style="font-size:0.78rem;color:var(--muted);line-height:2;">
+        <div>✉️ rpacori@unap.est.pe</div>
+        <div>🔗 github.com/Rommel-23</div>
+        <div>📍 Juliaca, Puno — Perú</div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- EDUCACIÓN -->
+    <div style="margin-bottom:2.5rem;" id="educacion">
+      <div class="sec-label"><div class="sec-dot"></div><h2>Formación Académica</h2></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2021 — Actualidad</div>
+          <div class="tl-title">Ingeniería Estadística e Informática</div>
+          <div class="tl-sub">Universidad Nacional del Altiplano — Puno, Perú</div>
+          <div class="tl-desc">Formación en análisis estadístico, desarrollo de software, modelado de datos, redes y sistemas de información. Cursos activos en machine learning, series de tiempo, arquitectura de computadoras y estadística aplicada.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <div style="margin-bottom:2.5rem;" id="experiencia">
+      <div class="sec-label"><div class="sec-dot"></div><h2>Experiencia</h2></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2023 — Actualidad</div>
+          <div class="tl-title">Co-fundador & Emprendedor Tecnológico</div>
+          <div class="tl-sub">Carwash la Curva — Puno, Perú</div>
+          <div class="tl-desc">Cofundador de emprendimiento de servicios de lavado de autos en la región de Puno. Gestión operativa, atención al cliente y aplicación de habilidades tecnológicas para optimizar procesos internos del negocio.</div>
+          <div class="tl-tags">
+            <span class="tl-tag">Emprendimiento</span>
+            <span class="tl-tag">Gestión operativa</span>
+            <span class="tl-tag">Optimización</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO -->
+    <div id="proyecto">
+      <div class="sec-label"><div class="sec-dot"></div><h2>Proyecto Destacado</h2></div>
+      <div class="proj-card">
+        <div class="proj-top">
+          <div class="proj-name">🚀 Prepárate+</div>
+          <span class="proj-live">● En producción</span>
+        </div>
+        <p class="proj-desc">Plataforma web de preparación para el examen de admisión de la Universidad Nacional del Altiplano (UNA Puno). Ofrece guías de estudio organizadas por materia según el prospecto oficial, foro de consultas y suscripción premium — orientada a los más de 15,000 postulantes anuales de la región.</p>
+        <a href="https://preparate-plus.netlify.app" target="_blank" class="proj-url">🔗 preparate-plus.netlify.app</a>
+        <div class="tl-tags">
+          <span class="tl-tag">HTML / CSS</span>
+          <span class="tl-tag">JavaScript</span>
+          <span class="tl-tag">Firebase</span>
+          <span class="tl-tag">Firestore</span>
+          <span class="tl-tag">Python</span>
+          <span class="tl-tag">ReportLab</span>
+          <span class="tl-tag">Netlify</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer id="contacto">
+  <p>&copy; 2026 — <span>Rommel Absalón Pacori Vera</span> · rpacori@unap.est.pe · github.com/Rommel-23</p>
 </footer>
 
+<script>
+// THEME TOGGLE
+const btn = document.getElementById('toggle-theme');
+const html = document.documentElement;
+function setTheme(t){
+  html.setAttribute('data-theme', t);
+  btn.textContent = t === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('theme', t);
+}
+btn.addEventListener('click', () => setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+const saved = localStorage.getItem('theme');
+setTheme(saved || 'light');
+
+// PARTICLES
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let pts = [];
+function resize(){ canvas.width=canvas.offsetWidth; canvas.height=canvas.offsetHeight; }
+function initPts(){
+  pts=[];
+  const n=Math.floor((canvas.width*canvas.height)/12000);
+  for(let i=0;i<n;i++) pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-0.5)*0.4,vy:(Math.random()-0.5)*0.4,r:Math.random()*1.5+0.5,c:i%2===0});
+}
+function drawPts(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pts.forEach((p,i)=>{
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>canvas.width) p.vx*=-1;
+    if(p.y<0||p.y>canvas.height) p.vy*=-1;
+    ctx.fillStyle = p.c ? '#a3e635' : '#38bdf8';
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+  });
+  pts.forEach((a,i)=>{ pts.slice(i+1).forEach(b=>{
+    const dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<90){ ctx.strokeStyle=`rgba(56,189,248,${0.18*(1-d/90)})`; ctx.lineWidth=0.6;
+      ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+  });});
+  requestAnimationFrame(drawPts);
+}
+resize(); initPts(); drawPts();
+window.addEventListener('resize',()=>{resize();initPts();});
+
+// SKILL BARS — animate on load
+window.addEventListener('load', ()=>{
+  document.querySelectorAll('.bar-fill').forEach(b=>{
+    b.style.width = (b.dataset.w || '0') + '%';
+  });
+});
+
+// COUNTERS
+function animateCounter(el, target, duration=1600){
+  const isLarge = target >= 1000;
+  let start = null;
+  function step(ts){
+    if(!start) start=ts;
+    const p = Math.min((ts-start)/duration,1);
+    const val = Math.round((1-Math.pow(1-p,3))*target);
+    el.textContent = isLarge ? val.toLocaleString()+'+' : val;
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+window.addEventListener('load', ()=>{
+  document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
+    animateCounter(el, parseInt(el.dataset.target));
+  });
+});
+</script>
 </body>
 </html>
